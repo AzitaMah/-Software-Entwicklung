@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="software-entwicklung:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/software_entwicklung_jar</output-path>
+    <root id="archive" name="software-entwicklung.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/SoftwareProjekt/src/main/resources/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="SoftwareProjekt" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.14.1/log4j-api-2.14.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-core/2.14.1/log4j-core-2.14.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
