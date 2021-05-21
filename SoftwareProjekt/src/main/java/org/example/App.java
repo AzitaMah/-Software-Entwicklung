@@ -34,7 +34,7 @@ public class App {
         // Failsafe
        System.out.println("Hi there,\n let's have\n         fun learning Java!");
 
-        
+
        log.debug("You may configure 'src/main/resources/log4j2.xml' ");
        log.debug("for adapting both console and 'A1.log' file output");
     }

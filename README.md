@@ -1,3 +1,5 @@
 # Software-Entwicklung
-Projekt von ......
-Test 
+Projekt von Azita und David
+To-Do List:
+_ SDR verstehen 
+_ 
