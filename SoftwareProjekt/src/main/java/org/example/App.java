@@ -3,6 +3,14 @@ package org.example;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.BufferedReader;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.SQLOutput;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 
 /**
  * A simple http://logging.apache.org/log4j/2.x demo,
@@ -18,34 +26,45 @@ public class App {
      *
      * @param args Yet unused
      */
-    public static void main( String[] args ) {
+    public static void main( String[] args ) throws IOException {
+      FileReader fr = new FileReader("C:\\Users\\dango\\IdeaProjects\\software-entwicklung\\SoftwareProjekt\\src\\main\\java\\org\\example\\SDR.txt");
+      BufferedReader br = new BufferedReader(fr);
+      Scanner scanner = new Scanner(System.in);
+      Eingabe eingabe = new Eingabe();
 
-       // The following statement requires setting
-       // <maven.compiler.source>15</maven.compiler.source>
-       // and <maven.compiler.target>15</maven.compiler.target>
-       // in your project's pom.xml file. In IntelliJ Idea
-       // this may require closing and re-opening your project
+      String [] currency = new String[39];
+      String [] wert = new String[39];
 
-//       System.out.println("""
-//         Hi there, let's have
-//         fun learning Java!""");
+      int i = 0;
+      int a = 0;
+      int x = 0;
+      int z = 0;
 
+      while (i<78){
+        if (a % 2 == 0) {
+          currency[x] = br.readLine();
+          System.out.println(currency[x]);
+      x++;
 
-        // Failsafe
-       System.out.println("Hi there,\n let's have\n         fun learning Java!");
+        } else {
+          wert[z] = br.readLine();
+          System.out.println(wert[z]);
+       z++;
+        }
+        a++;
+        i++;
+      }
 
-
-       log.debug("You may configure 'src/main/resources/log4j2.xml' ");
-       log.debug("for adapting both console and 'A1.log' file output");
+    try {
+      eingabe.gibAus();
+    }catch (InputMismatchException e){
+      System.out.println("ERORRORORO");
     }
 
-    /**
-     * This method purely exists for providing Junit tests.
-     *
-     * @param a first parameter
-     * @param b second parameter
-     * @return the sum of both parameters.
-     */
+
+    }
+
+
     public static int add(final int a, final int b) {
         return a + b;
     }
