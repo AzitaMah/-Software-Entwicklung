@@ -1,31 +1,14 @@
 package org.example;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.BufferedReader;
-
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.SQLOutput;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
-/**
- * A simple http://logging.apache.org/log4j/2.x demo,
- * see file resources/log4j2.xml for configuration options
- * and A1.log containing debugging output.
- */
-
 public class App {
-  private static Logger log = LogManager.getLogger(App.class);
 
-  /**
-   * Your application's main entry point.
-   *
-   * @param args Yet unused
-   */
+
   public static void main(String[] args) throws IOException {
 
     //path to the .txt file
@@ -64,12 +47,11 @@ public class App {
 
 
     //Interface and InputMismatchException catch
-try{
-  eingabe.gibAus();
-} catch (InputMismatchException e) {
-  System.out.println("Nur Zahlen eingeben!");
-}
-
+    try {
+      eingabe.gibAus();
+    } catch (InputMismatchException e) {
+      System.out.println("Nur Zahlen eingeben!");
+    }
 
 
   }
