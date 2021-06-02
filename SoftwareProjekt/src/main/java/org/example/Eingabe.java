@@ -26,22 +26,21 @@ public class Eingabe {
     do {
 
 
+      if (eingabe == 0) {
+        System.out.println("Enter a currency's name or part of it (>>xxx<< to exit): ");
 
-        if (eingabe == 0) {
-          System.out.println("Enter a currency's name or part of it (>>xxx<< to exit): ");
-
-        } else if (eingabe == 1) {
-          System.out.println("Enter a currency's name or part of it (>>xxx<< to exit): ");
-        } else if (eingabe == 2) {
-          System.out.println("Enter an amount (>>xxx<< to exit): ");
-        } else {
-          System.out.println("error");
-        }
-        eingabe = scanner.nextInt();
+      } else if (eingabe == 1) {
+        System.out.println("Enter a currency's name or part of it (>>xxx<< to exit): ");
+      } else if (eingabe == 2) {
+        System.out.println("Enter an amount (>>xxx<< to exit): ");
+      } else {
+        System.out.println("error");
+      }
+      eingabe = scanner.nextInt();
 
 
-    }while (Integer.toString(eingabe).toLowerCase().compareTo(exit) < 0 || Integer.toString(eingabe).toLowerCase().compareTo(exit) > 0) ;
+    } while (Integer.toString(eingabe).toLowerCase().compareTo(exit) < 0 || Integer.toString(eingabe).toLowerCase().compareTo(exit) > 0);
 
-    }
   }
+}
 

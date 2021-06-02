@@ -19,53 +19,49 @@ import java.util.Scanner;
  */
 
 public class App {
-    private static Logger log = LogManager.getLogger(App.class);
+  private static Logger log = LogManager.getLogger(App.class);
 
-    /**
-     * Your application's main entry point.
-     *
-     * @param args Yet unused
-     */
-    public static void main( String[] args ) throws IOException {
-      FileReader fr = new FileReader("C:\\Users\\dango\\IdeaProjects\\software-entwicklung\\SoftwareProjekt\\src\\main\\java\\org\\example\\SDR.txt");
-      BufferedReader br = new BufferedReader(fr);
-      Scanner scanner = new Scanner(System.in);
-      Eingabe eingabe = new Eingabe();
+  /**
+   * Your application's main entry point.
+   *
+   * @param args Yet unused
+   */
+  public static void main(String[] args) throws IOException {
+    FileReader fr = new FileReader("C:\\Users\\dango\\IdeaProjects\\software-entwicklung\\SoftwareProjekt\\src\\main\\java\\org\\example\\SDR.txt");
+    BufferedReader br = new BufferedReader(fr);
+    Scanner scanner = new Scanner(System.in);
+    Eingabe eingabe = new Eingabe();
 
-      String [] currency = new String[39];
-      String [] wert = new String[39];
+    String[] currency = new String[39];
+    String[] wert = new String[39];
 
-      int i = 0;
-      int a = 0;
-      int x = 0;
-      int z = 0;
+    int i = 0;
+    int a = 0;
+    int x = 0;
+    int z = 0;
 
-      while (i<78){
-        if (a % 2 == 0) {
-          currency[x] = br.readLine();
-          System.out.println(currency[x]);
-      x++;
+    while (i < 78) {
+      if (a % 2 == 0) {
+        currency[x] = br.readLine();
+        System.out.println(currency[x]);
+        x++;
 
-        } else {
-          wert[z] = br.readLine();
-          System.out.println(wert[z]);
-       z++;
-        }
-        a++;
-        i++;
+      } else {
+        wert[z] = br.readLine();
+        System.out.println(wert[z]);
+        z++;
       }
+      a++;
+      i++;
+    }
 
     try {
       eingabe.gibAus();
-    }catch (InputMismatchException e){
+    } catch (InputMismatchException e) {
       System.out.println("ERORRORORO");
     }
 
+  }
 
-    }
 
-
-    public static int add(final int a, final int b) {
-        return a + b;
-    }
 }
