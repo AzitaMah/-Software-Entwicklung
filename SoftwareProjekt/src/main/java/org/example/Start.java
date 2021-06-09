@@ -1,20 +1,14 @@
 package org.example;
 
-import java.io.IOException;
+public class Start {
 
 
-public class Eingabe {
-
-  public void gibAus() throws IOException {
-
-    TestArray arrayfull = new TestArray();
+  public void startupInterface() {
 
     String toBuy = "not set";
     String toSell = "not set";
+    String eingabe;
     String exit = "x";
-
-
-    arrayfull.arrayfuellen();
 
 
     //Interface startup
@@ -29,6 +23,4 @@ public class Eingabe {
 
 
   }
-
 }
-
