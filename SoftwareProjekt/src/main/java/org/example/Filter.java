@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class Filter {
 
-  public static String[] filterArray(String[] currency, String eingabe) {
+  public static String[] filterArray(String[] currency, String currencyEingabe) {
 
-    return Arrays.stream(currency).filter(v -> v.contains(eingabe)).toArray(String[]::new);
+    return Arrays.stream(currency).filter(v -> v.contains(currencyEingabe)).toArray(String[]::new);
 
 
   }

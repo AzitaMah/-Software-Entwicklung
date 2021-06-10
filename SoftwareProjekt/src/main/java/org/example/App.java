@@ -16,7 +16,10 @@ public class App {
 
     startui.startupInterface();
     arrayausgabe.arrayfuellen();
-    arrayausgabe.giveString();
+    arrayausgabe.filtered();
+    System.out.println();
+
+
 
 
   }

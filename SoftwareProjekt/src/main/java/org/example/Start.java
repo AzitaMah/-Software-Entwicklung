@@ -2,18 +2,32 @@ package org.example;
 
 public class Start {
 
+  String toBuy = "not set", toSell = "not set";
+
+  public void setToBuy(String toBuy) {
+    this.toBuy = toBuy;
+  }
+  public String getToBuy() {
+    return toBuy;
+  }
+
+  public void setToSell(String toSell) {
+    this.toSell = toSell;
+  }
+
+  public String getToSell() {
+    return toSell;
+  }
+
+
 
   public void startupInterface() {
-
-    String toBuy = "not set";
-    String toSell = "not set";
     String eingabe;
     String exit = "x";
 
+    System.out.println(toString());
 
     //Interface startup
-    System.out.println("Currency to buy: " + toBuy);
-    System.out.println("Currency to sell: " + toSell);
     System.out.println();
     System.out.println("0: Select currency to buy");
     System.out.println("1: Select currency to sell");
@@ -23,4 +37,11 @@ public class Start {
 
 
   }
+  @Override
+  public String toString() {
+    return "Currency to buy: " + getToBuy() + "\n" +
+      "Currency to sell: " + getToSell();
+  }
+
+
 }
