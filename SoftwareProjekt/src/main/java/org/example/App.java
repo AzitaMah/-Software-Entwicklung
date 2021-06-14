@@ -14,7 +14,7 @@ public class App {
     TestArray arrayausgabe = new TestArray();
     Start startui = new Start();
 
-    startui.startupInterface();
+    startui.startupInterface(0);
     arrayausgabe.arrayfuellen();
     arrayausgabe.filtered();
     System.out.println();

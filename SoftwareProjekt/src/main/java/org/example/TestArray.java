@@ -49,6 +49,7 @@ public class TestArray {
 
      filterTest = Filter.filterArray(currency, eingabe);
 
+
     int i = 0;
     for (String output : filterTest
     ) {
@@ -57,6 +58,25 @@ public class TestArray {
     }
 
   }
+
+    private double round(double value, int decimalPoints){
+    double d =Math.pow(10,decimalPoints);
+    return Math.round(value*d)/d;
+    }
+
+    private String prepareDouble(String wert){
+    StringBuffer buf = new StringBuffer(wert);
+    for (int i =0;i<buf.length();i++){
+      if(wert.charAt(i)==','){
+        buf.setCharAt(i,'.');
+      }else if(wert.charAt(i)=='.'){
+        buf.deleteCharAt(i);
+      }
+    }
+    String output= buf.toString();
+    return output;
+    }
+
 
     public void filtered() {
       // Persönliches check up. Vor Abgabe Löschen
@@ -82,7 +102,7 @@ public class TestArray {
 
           start.setToBuy(filterTest[eingabeInt]);
           start.toString();
-          start.startupInterface();
+          start.startupInterface(0);
           eingabe = "";
         } else if (eingabe.equals("1")) {
           System.out.println("Please enter the currencys name: ");
@@ -95,11 +115,40 @@ public class TestArray {
 
           start.setToSell(filterTest[eingabeInt]);
           start.toString();
-          start.startupInterface();
+          start.startupInterface(1);
           eingabe = "";
         }else if(eingabe.equals("2")) {
 
-          System.out.println("rechnung fehlt");
+          System.out.println("Enter an amount:");
+          double eingabeD = scanner.nextDouble();
+          double ausgabe = round(eingabeD,2);
+          String buy ="";
+          String sell="";
+          String Buy = start.getToBuy();
+
+          for(int i = 0;i<currency.length;i++){
+            if(start.getToBuy().equals(currency[i])){
+               buy = prepareDouble(wert[i]);
+              System.out.println(wert[i]);
+            }if(start.getToSell().equals(currency[i])){
+              sell= prepareDouble(wert[i]);
+            }
+          }
+
+          double buyD = round(Double.parseDouble(buy),2);
+          double sellD= round(Double.parseDouble(sell),2);
+          String setToBuy=start.getToBuy()+": "+ ausgabe;
+          start.setToBuy(setToBuy);
+          ausgabe= ausgabe / buyD;
+          ausgabe *= sellD;
+         // System.out.println(ausgabe);
+          String setToSell= start.getToSell()+": "+ round(ausgabe,2);
+          start.setToSell(setToSell);
+
+          start.toStringEnd();
+          start.startupInterface(2);
+
+
 
         } else {
           System.out.println("quit programm");

@@ -14,18 +14,19 @@ public class Start {
   public void setToSell(String toSell) {
     this.toSell = toSell;
   }
-
   public String getToSell() {
     return toSell;
   }
 
 
 
-  public void startupInterface() {
+  public void startupInterface(int option) {
     String eingabe;
     String exit = "x";
 
-    System.out.println(toString());
+    if(option!=2){
+      System.out.println(toString());
+    }else{System.out.println(toStringEnd());}
 
     //Interface startup
     System.out.println();
@@ -41,6 +42,10 @@ public class Start {
   public String toString() {
     return "Currency to buy: " + getToBuy() + "\n" +
       "Currency to sell: " + getToSell();
+  }
+  public String toStringEnd(){
+    return "Buying " +getToBuy() +"\n"+
+            "Selling "+getToSell();
   }
 
 
