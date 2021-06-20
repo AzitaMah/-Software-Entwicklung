@@ -49,7 +49,9 @@ public class Start {
   }
 
   public String toStringEnd(){
-    return "\n" + "The program is still running until you enter x" + "\n";
+    return "\n" +
+      "The program is still running until you enter x"
+      + "\n";
   }
 
 

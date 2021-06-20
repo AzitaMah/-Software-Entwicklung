@@ -166,12 +166,20 @@ public class TestArray {
 
         }
       } catch (InputMismatchException e) {
-        System.out.println("Please enter only the latin alphabet");
-        continue;
+        System.out.println("Please enter only the latin alphabet and please enter a number as follows: 123,00");
+        System.out.println();
+        start.startupInterface(0);
+
       } catch (ArrayIndexOutOfBoundsException e) {
         System.out.println("Please enter only the given index");
+        System.out.println();
         start.startupInterface(0);
-        continue;
+
+      } catch (NumberFormatException e) {
+        System.out.println("Please enter 2 currencies, one to sell and one to buy");
+        System.out.println();
+        start.startupInterface(0);
+
       }
 
 
