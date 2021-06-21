@@ -72,12 +72,12 @@ public class TestArray {
   }
 
   //Werte werden zu einem double
-  private String prepareDouble(String wert) {
+  public String prepareDouble(String wert) {
     StringBuffer buf = new StringBuffer(wert);
     for (int i = 0; i < buf.length(); i++) {
-      if (wert.charAt(i) == ',') {
+      if (buf.charAt(i) == ',') {
         buf.setCharAt(i, '.');
-      } else if (wert.charAt(i) == '.') {
+      } else if (buf.charAt(i) == '.') {
         buf.deleteCharAt(i);
       }
     }
@@ -162,8 +162,6 @@ public class TestArray {
           System.out.println("Currency to sell " + setToSell);
           start.startupInterface(2);
 
-        } else {
-
         }
       } catch (InputMismatchException e) {
         System.out.println("Please enter only the latin alphabet and please enter a number as follows: 123,00");
@@ -186,7 +184,10 @@ public class TestArray {
       eingabe = scanner.next();
 
 
+
     }
+    //Beenden des Scanners nach Eingebe von x
+    scanner.close();
   }
 
 
