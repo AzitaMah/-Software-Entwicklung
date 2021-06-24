@@ -25,11 +25,17 @@ public class UnitTest {
         String[] g3= Filter.filterArray(currency,"Mexican");
 
         Assert.assertArrayEquals(test1,g1);  // ottput stimmt nicht überein ?
+        System.out.println("Expected: " + test1[0] + "\n" + "Given: " + g1[0]);
+        System.out.println();
         Assert.assertArrayEquals(test2,g2);
+        System.out.println("Expected: " + test2[0] + "\n" + "Given: " + g2[0]);
+        System.out.println();
         Assert.assertArrayEquals(test3,g3);
+        System.out.println("Expected: " + test3[0] + "\n" + "Given: " + g3[0]);
     }
 
     @Test public void test_2_StingToDoubel(){
+
 
 
     }
