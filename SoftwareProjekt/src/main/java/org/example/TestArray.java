@@ -66,13 +66,20 @@ public class TestArray {
   }
 
   //Werte werden gerundet
+
+  /**
+   *
+   * @param value
+   * @param decimalPoints
+   * @return
+   */
   private double round(double value, int decimalPoints) {
     double d = Math.pow(10, decimalPoints);
     return Math.round(value * d) / d;
   }
 
   //Werte werden zu einem double
-  public String prepareDouble(String wert) {
+  public static String prepareDouble(String wert) {
     StringBuffer buf = new StringBuffer(wert);
     for (int i = 0; i < buf.length(); i++) {
       if (buf.charAt(i) == ',') {
@@ -86,7 +93,7 @@ public class TestArray {
   }
 
   //Eingabe wird geprueft und dementschprechen wird das Program weitergefuehrt. Zusaetzlich sind da die Exceptions implementiert.
-  public void filtered() {
+  public  void filtered() {
     // Persönliches check up. Vor Abgabe Löschen
     Scanner scanner = new Scanner(System.in);
     Start start = new Start();
