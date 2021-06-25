@@ -3,7 +3,7 @@ package org.example;
 import java.util.Arrays;
 
 /**
- * <p>Filterklasse fuer seperaten Array</p>
+ * <p>Filterklasse für Currency Selektion. Gibt gefilterten Array zürrück mit übereinstimmenden Currencies.</p>
  */
 
 public class Filter {
@@ -17,9 +17,9 @@ public class Filter {
    *           <li>{"New Zealand dollar","Singapore dollar"}</li>
    *      </ul>
    *
-   * @param currency <p>Array der mitgegeben wird</p>
-   * @param currencyEingabe <p>Parameter nachdem gefiltert wird </p>
-   * @return <p>Gibt gefilterten Array zurrück</p>
+   * @param currency <p>Array der mitgegeben wird.</p>
+   * @param currencyEingabe <p>Parameter nachdem gefiltert wird.</p>
+   * @return <p>Gibt gefilterten Array zurrück.</p>
    *
    */
 

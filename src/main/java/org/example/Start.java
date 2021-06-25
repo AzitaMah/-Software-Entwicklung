@@ -1,14 +1,14 @@
 package org.example;
 
 /**
- * <p>Start Klasse</p>
+ * <p>Start Klasse mit User Interface.</p>
  */
 
 public class Start {
 
   /**
-   * <p>Das interface wird ausgegeben.</p>
-   *<p>Zu beginn werden Werte toBuy und toSell auf "not set" gesetzt.</p>
+   * <p>Das Interface wird ausgegeben.</p>
+   *<p>Zu Beginn werden Werte toBuy und toSell auf "not set" gesetzt.</p>
    */
 
 
@@ -31,14 +31,14 @@ public class Start {
   }
 
   /**
-   * @param toSell <p> Sell wird gesetzt</p>
+   * @param toSell <p> Sell wird gesetzt.</p>
    */
   public void setToSell(String toSell) {
     this.toSell = toSell;
   }
 
   /**
-   * @return Parameter Sell   <p>Paramert Sell wird zurrück gegeben</p>
+   * @return Parameter Sell   <p>Paramert Sell wird zurrück gegeben.</p>
    */
   public String getToSell() {
     return toSell;
@@ -47,9 +47,9 @@ public class Start {
 
   /**
    *
-   * <p>Start interface/ Mit getter und Setter hinzufügen der currencys/End interface</p>
+   * <p>Start Interface/ Mit getter und Setter hinzufügen der Currencies/End interface.</p>
    *
-   * @param option <p>int option gibt die entsprechene Ausgabe für das Ende an </p>
+   * @param option <p>int option gibt die entsprechene Ausgabe für das End Interface an. </p>
    */
   public void startupInterface(int option) {
     String eingabe;

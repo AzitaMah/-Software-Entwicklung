@@ -5,13 +5,23 @@ import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
+/**
+ * <p>Klasse, die die hauptsächliche Selektier und Rechenlogik enthält.</p>
+ */
+
 public class Ausführung {
 
 
   //Arrays
   String[] currency = new String[39];
   String[] wert = new String[39];
+
   static String[] filterTest = new String[39];
+
+  /**
+   * <p>Name und Wert werden jeweils in ein Array gefüllt.</p>
+   * @throws IOException <p>Exeption für den Fall, dass SDR Datei nicht gefunden wird.</p>
+   */
 
   //Name und Wert werden jeweils in ein Array gefuellt
   public void arrayfuellen() throws IOException {
@@ -45,13 +55,11 @@ public class Ausführung {
     }
   }
 
-  public static String[] getFilterTest() {
-    return filterTest;
-  }
-
-  public static void setFilterTest(String[] filterTest) {
-    Ausführung.filterTest = filterTest;
-  }
+  /**
+   * <p>Hier wird die FilterMethode mit dem Index implementiert.</p>
+   * @param currency <p>Currency Array wird mitgegeben um zu filtern.</p>
+   * @param eingabe <p>Eingabeparameter um danach im Currency-Array zu filtern.</p>
+   */
 
   //hier wird die filter methode implementiert
   private static void filter(String[] currency, String eingabe) {
@@ -77,12 +85,23 @@ public class Ausführung {
 
   }
 
+  /**
+   * <p>Zum richtigen Runden der Ausgabe. </p>
+   * @param value <p>Gibt den zu rundenden Wert an.</p>
+   * @param decimalPoints <p>Sagt, um wie viele Werte gerundet werden soll.</p>
+   * @return <p>Gibt den entsprechend grundeten Wert zurrück.</p>
+   */
   //Werte werden gerundet
   private double round(double value, int decimalPoints) {
     double d = Math.pow(10, decimalPoints);
     return Math.round(value * d) / d;
   }
 
+  /**
+   *
+   * @param wert <p>Ist der Mitgegebene String des Currency-Wertes, für die Anpassung an einen geeigneten double Wert.</p>
+   * @return <p>Gibt den für Java vorbereiteten double als String zurrück. </p>
+   */
   //Werte werden zu einem double
   public static String prepareDouble(String wert) {
     StringBuffer buf = new StringBuffer(wert);
@@ -93,10 +112,15 @@ public class Ausführung {
         buf.deleteCharAt(i);
       }
     }
+
     String output = buf.toString();
     return output;
   }
 
+  /**
+   * <p>Methode mit eigentlicher Selktier- und Rechenlogik.</p>
+   * @throws IOException <p>Eingabe wird geprüft und dementschprechen wird das Program weitergefuehrt. Zusätzlich sind da die Catch-Methoden implementiert.</p>
+   */
   //Eingabe wird geprueft und dementschprechen wird das Program weitergefuehrt. Zusaetzlich sind da die Exceptions implementiert.
   public void filtered() throws IOException {
     // Persönliches check up. Vor Abgabe Löschen
@@ -175,7 +199,8 @@ public class Ausführung {
           start.startupInterface(2);
 
         }
-      } catch (InputMismatchException e) {
+      }
+      catch (InputMismatchException e) {
         System.out.println("Please enter only the latin alphabet and please enter a number as follows: 123,00");
         System.out.println();
         start.startupInterface(0);
