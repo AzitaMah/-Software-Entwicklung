@@ -1,0 +1,82 @@
+Chinese yuan
+9.307.520
+Euro
+1.200.190
+Japanese yen
+155.755.000
+U.K. pound
+1.029.060
+U.S. dollar
+1.427.510
+Algerian dinar
+191.152.000
+Australian dollar
+1.862.860
+Botswana pula
+16.021.400
+Brazilian real
+8.335.350
+Brunei dollar
+1.925.420
+Canadian dollar
+1.803.650
+Chilean peso
+1,054.160000
+Colombian peso
+5,172.720000
+Czech koruna
+31.560.800
+Danish krone
+8.925.380
+Indian rupee
+104.377.000
+Israeli New Shekel
+4.752.170
+Korean won
+1,614.940000
+Kuwaiti dinar
+0.431678
+Malaysian ringgit
+5.889.910
+Mauritian rupee
+57.338.800
+Mexican peso
+30.345.200
+New Zealand dollar
+2.006.340
+Norwegian krone
+12.102.600
+Omani rial
+0.548878
+Peruvian sol
+5.283.210
+Philippine peso
+69.325.500
+Polish zloty
+5.496.890
+Qatari riyal
+5.196.130
+Russian ruble
+106.012.000
+Saudi Arabian riyal
+5.353.150
+Singapore dollar
+1.925.420
+South African rand
+21.933.900
+Swedish krona
+12.200.600
+Swiss franc
+1.329.290
+Thai baht
+44.018.500
+Trinidadian dollar
+9.652.040
+U.A.E. dirham
+5.242.520
+Uruguayan peso
+63.723.900
+
+
+
+
