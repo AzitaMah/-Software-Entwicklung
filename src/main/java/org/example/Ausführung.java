@@ -1,9 +1,6 @@
 package org.example;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
@@ -23,7 +20,9 @@ public class Ausführung {
     //path to the .txt file
 
     //reading only the first line
-    BufferedReader br = new BufferedReader(new FileReader("SDR.txt"));
+    InputStream is = getClass().getResourceAsStream("SDR.txt");
+    InputStreamReader isr = new InputStreamReader(is);
+    BufferedReader br = new BufferedReader(isr);
 
 
     //Variables for the arrays
