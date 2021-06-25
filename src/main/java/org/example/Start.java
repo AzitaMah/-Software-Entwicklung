@@ -27,7 +27,7 @@ public class Start {
       //Interface startup
 
       System.out.println("Currency to buy: " + toBuy);
-      System.out.println("Currency to buy: " + toSell);
+      System.out.println("Currency to sell: " + toSell);
 
       System.out.println("++++++++++++++++++++++++");
       System.out.println("0: Select currency to buy");

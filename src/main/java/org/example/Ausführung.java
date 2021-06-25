@@ -3,6 +3,7 @@ package org.example;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
@@ -86,12 +87,12 @@ public class Ausführung {
   }
 
   //Eingabe wird geprueft und dementschprechen wird das Program weitergefuehrt. Zusaetzlich sind da die Exceptions implementiert.
-  public void filtered() {
+  public void filtered() throws IOException {
     // Persönliches check up. Vor Abgabe Löschen
     Scanner scanner = new Scanner(System.in);
     Start start = new Start();
-    Ausführung arrayausgabe = new Ausführung();
-    Start startui = new Start();
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
 
 
     String eingabe = scanner.next();
@@ -105,7 +106,7 @@ public class Ausführung {
         if (eingabe.equals("0")) {
 
           System.out.println("Please enter the currencys name: ");
-          String currencyEingabe = scanner.next().toUpperCase();
+          String currencyEingabe = reader.readLine().toUpperCase();
 
           filter(currency, currencyEingabe);
 
@@ -120,7 +121,7 @@ public class Ausführung {
         } else if (eingabe.equals("1")) {
 
           System.out.println("Please enter the currencys name: ");
-          String currencyEingabe = scanner.next().toUpperCase();
+          String currencyEingabe = reader.readLine().toUpperCase();
 
           filter(currency, currencyEingabe);
 
