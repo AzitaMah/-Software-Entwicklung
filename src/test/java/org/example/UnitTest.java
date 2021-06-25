@@ -14,12 +14,16 @@ public class UnitTest {
 
   @Test public void test_1_SDR_FilteredData(){
     String[] currency = {"Kuwaiti dinar",
-      "Malaysian ringgit",
-      "Mauritian rupee",
-      "Mexican peso",
-      "New Zealand dollar",
-      "Norwegian krone",
-      "Singapore dollar"
+            "Malaysian ringgit",
+            "Mauritian rupee",
+            "Mexican peso",
+            "New Zealand dollar",
+            "Norwegian krone",
+            "Singapore dollar",
+            "Chinese yuan",
+            "Singapore dollar",
+            "Swedish krona",
+            "South African rand"
     };
     //Test1
     String[]test1=  {"Kuwaiti dinar"};
@@ -66,12 +70,6 @@ public class UnitTest {
     Assert.assertEquals(three,d3);
     System.out.println("Expected: "+three+"\nGiven:"+d3);
 
-  }
-
-
-
-  @Test public void test_3_round(){
-    //  Assert.assertEquals("2368,4",TestArray.filtered);                   // Wie testen wenn filterd sowohl void ist, als auch kein input hat
   }
 
 

@@ -46,6 +46,14 @@ public class Ausführung {
     }
   }
 
+  public static String[] getFilterTest() {
+    return filterTest;
+  }
+
+  public static void setFilterTest(String[] filterTest) {
+    Ausführung.filterTest = filterTest;
+  }
+
   //hier wird die filter methode implementiert
   private static void filter(String[] currency, String eingabe) {
 
@@ -56,12 +64,16 @@ public class Ausführung {
 
     filterTest = Filter.filterArray(currency, eingabe);
 
-
-    int i = 0;
-    for (String output : filterTest
-    ) {
-      System.out.println(i + ": " + output);
-      i++;
+  //Test ob Filter Klasse etwas ausgibt
+    if(filterTest.length==0){
+      System.out.println("Currency not found");
+    }else{
+      int i = 0;
+      for (String output : filterTest
+      ) {
+        System.out.println(i + ": " + output);
+        i++;
+      }
     }
 
   }
