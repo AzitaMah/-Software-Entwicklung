@@ -29,10 +29,13 @@ public class UnitTest {
     String[]test2 = {"New Zealand dollar"};
     String[]test3 = {"Mexican peso"};
     String[]test4 = {"New Zealand dollar","Singapore dollar"};
+    String[]test5 = {"South African rand"};
     String[] g1= Filter.filterArray(currency,"Kuwaiti");
     String[] g2= Filter.filterArray(currency,"New Zealand");
     String[] g3= Filter.filterArray(currency,"Mexican");
     String[] g4= Filter.filterArray(currency,"dol");
+    String[] g5= Filter.filterArray(currency,"South African rand");
+
 
 
     Assert.assertArrayEquals(test1,g1);  // ottput stimmt nicht überein ?
@@ -46,6 +49,9 @@ public class UnitTest {
     System.out.println();
     Assert.assertArrayEquals(test4,g4);
     System.out.println("Expected: " + test4[0]+", "+test4[1] + "\n" + "Given: " + g4[0]+", "+g4[1]);
+    System.out.println();
+    Assert.assertArrayEquals(test5,g5);
+    System.out.println("Expected: " + test5[0] + "\n" + "Given: " + g5[0]);
     System.out.println();
 
   }

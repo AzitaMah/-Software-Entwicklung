@@ -38,7 +38,7 @@ public class Start {
   }
 
   /**
-   * @return Parameter Sell   <p>Paramert Sell wird zurrück gegeben.</p>
+   * @return Parameter Sell   <p>Paramert Sell wird zurück gegeben.</p>
    */
   public String getToSell() {
     return toSell;

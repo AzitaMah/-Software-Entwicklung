@@ -20,7 +20,7 @@ public class Ausführung {
 
   /**
    * <p>Name und Wert werden jeweils in ein Array gefüllt.</p>
-   * @throws IOException <p>Exeption für den Fall, dass SDR Datei nicht gefunden wird.</p>
+   * @throws IOException <p>Exeption für den Fall, dass die SDR Datei nicht gefunden wird.</p>
    */
 
   //Name und Wert werden jeweils in ein Array gefuellt
