@@ -1,24 +1,56 @@
 package org.example;
 
+/**
+ * <p>Start Klasse</p>
+ */
+
 public class Start {
 
+  /**
+   * <p>Das interface wird ausgegeben.</p>
+   *<p>Zu beginn werden Werte toBuy und toSell auf "not set" gesetzt.</p>
+   */
+
+
   String toBuy = "not set", toSell = "not set";
+
+  /**
+   * @param toBuy <p>Parameter Buy wird gesetzt.</p>
+   */
 
   //Getter und Setter fuer Buy und Sell
   public void setToBuy(String toBuy) {
     this.toBuy = toBuy;
   }
+
+  /**
+   * @return Parameter Buy <p>Buy wird zurrück gegeben.</p>
+   */
   public String getToBuy() {
     return toBuy;
   }
 
+  /**
+   * @param toSell <p> Sell wird gesetzt</p>
+   */
   public void setToSell(String toSell) {
     this.toSell = toSell;
   }
+
+  /**
+   * @return Parameter Sell   <p>Paramert Sell wird zurrück gegeben</p>
+   */
   public String getToSell() {
     return toSell;
   }
 
+
+  /**
+   *
+   * <p>Start interface/ Mit getter und Setter hinzufügen der currencys/End interface</p>
+   *
+   * @param option <p>int option gibt die entsprechene Ausgabe für das Ende an </p>
+   */
   public void startupInterface(int option) {
     String eingabe;
     String exit = "x";
@@ -48,6 +80,9 @@ public class Start {
 
   }
 
+  /**
+   * @return  <p>Gibt aus, dass das Programm noch läuft, bis x eingegeben wird. </p>
+   */
   public String toStringEnd(){
     return "\n" +
       "The program is still running until you enter x"

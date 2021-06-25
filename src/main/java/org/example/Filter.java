@@ -2,7 +2,26 @@ package org.example;
 
 import java.util.Arrays;
 
+/**
+ * <p>Filterklasse fuer seperaten Array</p>
+ */
+
 public class Filter {
+
+  /**
+   * <p>Gibt einen gefilterten currency Array aus.</p>
+   *
+   * <br>
+   *  <ul>
+   *           <li>currencyEingabe ="dol";</li>
+   *           <li>{"New Zealand dollar","Singapore dollar"}</li>
+   *      </ul>
+   *
+   * @param currency <p>Array der mitgegeben wird</p>
+   * @param currencyEingabe <p>Parameter nachdem gefiltert wird </p>
+   * @return <p>Gibt gefilterten Array zurrück</p>
+   *
+   */
 
   public static String[] filterArray(String[] currency, String currencyEingabe) {
 
