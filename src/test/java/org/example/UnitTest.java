@@ -21,7 +21,6 @@ public class UnitTest {
             "Norwegian krone",
             "Singapore dollar",
             "Chinese yuan",
-            "Singapore dollar",
             "Swedish krona",
             "South African rand"
     };
